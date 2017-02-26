@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cq9191.cashbook.MyManageActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/tv_top"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/blue">
+            <ImageButton
+                android:id="@+id/ib_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:src="@drawable/bt_back"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="18dp"/>
+            <TextView
+                android:id="@+id/my_manage_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="个人中心"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_many_button"
+            android:layout_below="@id/tv_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <!--用户显示-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+                <ImageView
+                    android:id="@+id/iv_my_icon"
+                    android:src="@drawable/icon_my"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="60dp"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="用户："
+                        android:gravity="center"
+                        android:textSize="22dp"
+                        android:textColor="@color/orange"/>
+
+                    <TextView
+                        android:id="@+id/tv_my_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:textSize="28dp"
+                        android:text="Qiao Jim"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--密码修改-->
+            <Button
+                android:id="@+id/bt_change_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="          登录密码修改        》"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:gravity="center|left"
+                android:background="@drawable/click_button"/>
+
+            <!--密码修改-->
+            <Button
+                android:id="@+id/bt_total_detail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="          个人总收支情况        》"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:gravity="center|left"
+                android:background="@drawable/click_button"/>
+
+            <!--添加人物分类卡-->
+            <Button
+                android:id="@+id/bt_add_new_person"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="          编辑人物分类卡     》"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:gravity="center|left"
+                android:background="@drawable/click_button"/>
+
+            <!--添加事件分类卡-->
+            <Button
+                android:id="@+id/bt_add_new_things"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="          编辑事件分类卡     》"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:gravity="center|left"
+                android:background="@drawable/click_button"/>
+
+            <!--生成自定义账单-->
+            <Button
+                android:id="@+id/bt_create_cash"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="          生成自定义账单     》"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:gravity="center|left"
+                android:background="@drawable/click_button"/>
+
+            <!--自定义清除账单-->
+            <Button
+                android:id="@+id/bt_delete_cash"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="          自定义清除账单     》"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:gravity="center|left"
+                android:background="@drawable/click_button"/>
+
+            <!--反馈-->
+            <Button
+                android:id="@+id/bt_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="          意见反馈     》"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:gravity="center|left"
+                android:background="@drawable/click_button"/>
+
+            <!--关于我们-->
+            <Button
+                android:id="@+id/bt_about_us"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="          关于我们     》"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:gravity="center|left"
+                android:background="@drawable/click_button"/>
+
+            <!--退出登录-->
+            <Button
+                android:id="@+id/bt_logout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="          退出登录     》"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:gravity="center|left"
+                android:background="@drawable/click_important_button"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

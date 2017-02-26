@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">爱记账</string>
+    <string name="tab1">按时间</string>
+    <string name="tab2">按人物</string>
+    <string name="tab3">按事件</string>
+    <string name="middle_line_2">---- 自定义账单有效时限 ----</string>
+    <string name="middle_line_1">---- 已有人物卡 (长按可删除) ----</string>
+    <string name="middle_line_3">---- 已有事件卡 (长按可删除) ----</string>
+    <string name="set_time_hint">输入自定义时限(天)</string>
+    <string name="about_us">界面、功能设计：\nJohn Soon\n\n\n界面代码实现：\nQiao Jim\n\n\n
+        数据库代码实现：\n浩军大帝\n\n\nApp后期调试：\nWestline Owl\n\n\nApp更新维护：\nQiao Jim</string>
+    <string name="title_activity_register">Register a New Count</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <string name="delete_tip">1、人物选择--\n删除特定人物的相关账单\n2、事件选择--\n删除特定事件的相关账单\n
+        3、节点时间--\n删除特定时间之前的相关账单</string>
+
+</resources>

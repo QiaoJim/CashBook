@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyManageUi.DeleteCash"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 顶部标题栏 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="删除部分账单"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:gravity="center"/>
+
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:background="@null"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/bt_back"
+            android:scaleType="centerCrop"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageButton
+            android:id="@+id/ib_ok"
+            android:background="@null"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/bt_yes"
+            android:scaleType="centerCrop"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="18dp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="------  提示信息  ------"
+            android:textSize="22dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/et_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/delete_tip" />
+
+    </LinearLayout>
+
+    <!--人物选择-->
+    <LinearLayout android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <CheckBox
+                android:id="@+id/cb_person"
+                android:layout_width="120dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="3dp"
+                android:text="人物"
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:checked="false"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="15dp">
+                <EditText
+                    android:id="@+id/et_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blue_border"
+                    android:hint="请选择人物"
+                    android:gravity="center"
+                    android:textSize="18dp"/>
+
+                <ImageButton
+                    android:id="@+id/bt_dropdown"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/bt_down"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/round_shape_blue"/>
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--事件选择-->
+    <LinearLayout android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_things"
+                android:layout_width="120dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="3dp"
+                android:text="事件"
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:gravity="center|left" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="15dp">
+                <EditText
+                    android:id="@+id/et_things"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blue_border"
+                    android:hint="请选择事件"
+                    android:gravity="center"
+                    android:textSize="18dp"/>
+
+                <ImageButton
+                    android:id="@+id/bt_dropdown_2"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/bt_down"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/round_shape_blue"/>
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--时间选择-->
+    <LinearLayout android:layout_height="60dp"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_time"
+            android:layout_width="120dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="3dp"
+            android:text="节点时间"
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:gravity="center|left" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp">
+
+            <EditText
+                android:id="@+id/et_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:hint="请选择时间"
+                android:editable="false"
+                android:clickable="false"/>
+
+            <ImageButton
+                android:id="@+id/ib_time"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/bt_down"
+                android:scaleType="centerCrop"
+                android:background="@drawable/round_shape_blue"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="12dp"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_below="@id/tv_new_password2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/bt_delete"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="确认删除"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:background="@drawable/click_important_button"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="12dp"/>
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:background="@drawable/click_button"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="50dp"/>
+    </LinearLayout>
+
+</LinearLayout>

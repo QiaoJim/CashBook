@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cq9191.cashbook.MyManageUi.CreateCash">
+
+    <TextView
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="搜索页"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:gravity="center"/>
+
+    <!--人物选择-->
+    <LinearLayout android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <CheckBox
+                android:id="@+id/cb_person"
+                android:layout_width="120dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="3dp"
+                android:text="人物"
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:checked="false"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="15dp">
+                <EditText
+                    android:id="@+id/et_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blue_border"
+                    android:hint="默认所有"
+                    android:gravity="center"
+                    android:textSize="18dp"/>
+
+                <ImageButton
+                    android:id="@+id/bt_dropdown"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/bt_down"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/round_shape_blue"/>
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--事件选择-->
+    <LinearLayout android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_things"
+                android:layout_width="120dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="3dp"
+                android:text="事件"
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:gravity="center|left" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="15dp">
+                <EditText
+                    android:id="@+id/et_things"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blue_border"
+                    android:hint="默认所有"
+                    android:gravity="center"
+                    android:textSize="18dp"/>
+
+                <ImageButton
+                    android:id="@+id/bt_dropdown_2"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/bt_down"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/round_shape_blue"/>
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--时间选择-->
+    <LinearLayout android:layout_height="60dp"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_start_time"
+            android:layout_width="120dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="3dp"
+            android:text="起始时间"
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:gravity="center|left" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp">
+
+            <EditText
+                android:id="@+id/start_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:hint="请选择起始时间"
+                android:editable="false"
+                android:clickable="false"/>
+
+            <ImageButton
+                android:id="@+id/ib_start_time"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/bt_down"
+                android:scaleType="centerCrop"
+                android:background="@drawable/round_shape_blue"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="12dp"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="60dp"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_end_time"
+            android:layout_width="120dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="3dp"
+            android:text="截止时间"
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:gravity="center|left" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp">
+
+            <EditText
+                android:id="@+id/end_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:hint="请选择截止时间"
+                android:editable="false"
+                android:clickable="false"/>
+
+            <ImageButton
+                android:id="@+id/ib_end_time"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/bt_down"
+                android:scaleType="centerCrop"
+                android:background="@drawable/round_shape_blue"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="12dp"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!--金额选择-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="3dp">
+
+        <CheckBox
+            android:id="@+id/cb_money"
+            android:layout_width="120dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="3dp"
+            android:text="金额"
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:gravity="center|left" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_min_money"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:textColor="@color/red"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:text="元"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:text="~"
+                android:textColor="@color/blue"
+                android:textSize="30dp"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/et_max_money"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:textColor="@color/red"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:text="元"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/red"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/bt_back"
+            android:text="返回"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/click_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"/>
+        <Button
+            android:id="@+id/bt_search"
+            android:text="搜索"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/click_important_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"/>
+    </LinearLayout>
+
+</LinearLayout>

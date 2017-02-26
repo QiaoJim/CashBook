@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- 账单详情页 + 编辑按钮-->
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue">
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@null"
+            android:src="@drawable/bt_back"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="18dp"/>
+        <TextView
+            android:id="@+id/detail_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="账单详情页"
+            android:textSize="22dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center" />
+        <ImageButton
+            android:id="@+id/ib_add"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@null"
+            android:src="@drawable/bt_finish_add"
+            android:scaleType="centerCrop"
+            android:layout_alignRight="@id/detail_page"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+        <!-- 详情显示 -->
+
+        <!-- 时间 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:orientation="horizontal">
+            <TextView
+                android:text="时间："
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/et_time"
+                android:textColor="@color/green"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:editable="false"/>
+        </LinearLayout>
+
+        <!-- 金额 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:orientation="horizontal">
+            <TextView
+                android:text="金额(元)："
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/et_money"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <!--支出或收入种类-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:orientation="horizontal">
+            <TextView
+                android:text="种类："
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+            <RadioGroup
+                android:id="@+id/tag_bt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/tag_in"
+                    android:text="收入"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent" />
+                <RadioButton
+                    android:id="@+id/tag_out"
+                    android:text="支出"
+                    android:textSize="17dp"
+                    android:textColor="@color/blue"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- 人物 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:orientation="horizontal">
+            <TextView
+                android:text="人物："
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/et_person"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp" />
+        </LinearLayout>
+
+        <!--人物卡选择-->
+        <GridView
+            android:id="@+id/person_grid"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:numColumns="3"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:horizontalSpacing="3dp"
+            android:verticalSpacing="3dp" />
+
+        <!-- 事件 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:orientation="horizontal">
+            <TextView
+                android:text="事件："
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/et_things"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp" />
+        </LinearLayout>
+
+        <!--事件卡选择-->
+        <GridView
+            android:id="@+id/things_grid"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:numColumns="2"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:horizontalSpacing="3dp"
+            android:verticalSpacing="3dp" />
+
+            <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <!-- 描述 -->
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:text="描述："
+                    android:textSize="20dp"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent" />
+                <EditText
+                    android:id="@+id/et_describ"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/gray_border"
+                    android:hint="事件描述可选填"
+                    android:gravity="center"
+                    android:maxLines="4"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+</LinearLayout>
+

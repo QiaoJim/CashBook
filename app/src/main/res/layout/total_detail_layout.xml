@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 账单详情页 + 编辑按钮-->
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/blue">
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/bt_back"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="18dp"/>
+        <TextView
+            android:id="@+id/detail_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="总收支情况"
+            android:textSize="22dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center" />
+    </RelativeLayout>
+
+
+    <!-- 总收入 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_margin="3dp">
+        <TextView
+            android:text="总收入："
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="17dp"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:gravity="center"/>
+        <TextView
+            android:textColor="@color/green"
+            android:id="@+id/total_in"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+
+    <!-- 总支出 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_margin="3dp">
+        <TextView
+            android:text="总支出："
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="17dp"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:gravity="center"/>
+        <TextView
+            android:textColor="@color/red"
+            android:id="@+id/total_out"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <!-- 余额 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_margin="3dp">
+        <TextView
+            android:text="余额："
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="17dp"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/total_left"
+            android:textSize="20dp"
+            android:gravity="left|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

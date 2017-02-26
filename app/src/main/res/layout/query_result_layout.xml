@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cq9191.cashbook.QueryResultListActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:id="@+id/top_title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="搜索结果"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:gravity="center"/>
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="left|center"
+            android:src="@drawable/bt_back"
+            android:scaleType="centerCrop"
+            android:background="@null"
+            android:layout_marginLeft="20dp"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_things_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--总收入/支出-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_things_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/blue"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/tv_things_total_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/slight_gray"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_month_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--总收入-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="总收入："
+                android:textColor="@color/blue"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/tv_month_in"
+                android:textColor="@color/green"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <!--总支出-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="总支出："
+                android:textColor="@color/blue"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/tv_month_out"
+                android:textColor="@color/red"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <!--总余额-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="余额："
+                android:textColor="@color/blue"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/tv_month_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/slight_gray"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/query_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+        <Button
+            android:id="@+id/bt_sure_delete"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="确认删除"
+            android:textSize="18dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/click_important_button"
+            android:textColor="@color/white"/>
+    </FrameLayout>
+
+
+
+</LinearLayout>

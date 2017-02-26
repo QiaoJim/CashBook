@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cq9191.cashbook.MyManageUi.CreateCash">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="生成自定义账单"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"/>
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:background="@null"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/bt_back"
+            android:scaleType="centerCrop"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="20dp"/>
+    </FrameLayout>
+
+    <!--人物选择-->
+    <LinearLayout android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_person"
+                android:layout_width="120dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="3dp"
+                android:text="人物"
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:checked="false"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="15dp">
+                <EditText
+                    android:id="@+id/et_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blue_border"
+                    android:hint="请选择人物"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:editable="false"/>
+
+                <ImageButton
+                    android:id="@+id/bt_dropdown"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/bt_down"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/round_shape_blue"/>
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--事件选择-->
+    <LinearLayout android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_things"
+                android:layout_width="120dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="3dp"
+                android:text="事件"
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:gravity="center|left" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="15dp">
+                <EditText
+                    android:id="@+id/et_things"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blue_border"
+                    android:hint="请选择事件"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:editable="false"/>
+
+                <ImageButton
+                    android:id="@+id/bt_dropdown_2"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/bt_down"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/round_shape_blue"/>
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--时间选择-->
+    <LinearLayout android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_start_time"
+            android:layout_width="120dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="3dp"
+            android:text="起始时间"
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:gravity="center|left" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp">
+
+            <EditText
+                android:id="@+id/start_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:hint="请选择"
+                android:editable="false"/>
+
+            <ImageButton
+                android:id="@+id/ib_start_time"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/bt_down"
+                android:scaleType="centerCrop"
+                android:background="@drawable/round_shape_blue"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="12dp"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_end_time"
+            android:layout_width="120dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="3dp"
+            android:text="截止时间"
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:gravity="center|left" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp">
+
+            <EditText
+                android:id="@+id/end_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:hint="请选择"
+                android:editable="false"/>
+
+            <ImageButton
+                android:id="@+id/ib_end_time"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/bt_down"
+                android:scaleType="centerCrop"
+                android:background="@drawable/round_shape_blue"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="12dp"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/bt_month_cash"
+            android:text="月账单"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/click_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"/>
+        <Button
+            android:id="@+id/bt_create"
+            android:text="自定义账单"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/click_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"/>
+    </LinearLayout>
+
+</LinearLayout>

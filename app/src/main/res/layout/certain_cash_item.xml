@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="69dp"
+    android:layout_margin="3dp"
+    android:orientation="vertical">
+
+    <!--时间显示-->
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textColor="@color/blue"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="45dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+        <!--人物或事件显示-->
+        <TextView
+            android:id="@+id/tv_person_or_things"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_marginLeft="45dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <!--金额显示-->
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/red"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+</LinearLayout>

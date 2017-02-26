@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 账单详情页 + 编辑按钮-->
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue">
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/bt_back"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="18dp"/>
+        <TextView
+            android:id="@+id/detail_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="账单详情页"
+            android:textSize="22dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center" />
+        <ImageButton
+            android:id="@+id/ib_edit"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@null"
+            android:src="@drawable/bt_edit"
+            android:scaleType="centerCrop"
+            android:layout_alignRight="@id/detail_page"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+
+    <!-- 详情显示 -->
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 时间 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_margin="3dp">
+            <TextView
+                android:text="时间："
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/show_time"
+                android:textColor="@color/green"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginRight="10dp"
+                android:editable="false"/>
+        </LinearLayout>
+
+        <!--支出或收入-->
+        <!-- 人物 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_margin="3dp">
+            <TextView
+                android:text="种类："
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+            <RadioGroup
+                android:id="@+id/bt_tag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:clickable="false">
+                <RadioButton
+                    android:id="@+id/tag_in"
+                    android:text="收入"
+                    android:textSize="17sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/blue"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"/>
+                <RadioButton
+                    android:id="@+id/tag_out"
+                    android:text="支出"
+                    android:textSize="17dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/blue"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:clickable="false"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- 人物 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_margin="3dp">
+            <TextView
+                android:text="人物："
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/show_person"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginRight="10dp"
+                android:editable="false"/>
+        </LinearLayout>
+
+        <!-- 事件 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_margin="3dp">
+            <TextView
+                android:text="事件："
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/show_things"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginRight="10dp"
+                android:editable="false"/>
+        </LinearLayout>
+
+        <!-- 金额 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_margin="3dp">
+            <TextView
+                android:text="金额："
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/show_money"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginRight="10dp"
+                android:editable="false"/>
+        </LinearLayout>
+
+        <!-- 描述 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="horizontal"
+            android:layout_margin="3dp">
+            <TextView
+                android:text="描述："
+                android:textSize="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:id="@+id/show_desc"
+                android:textColor="@color/deep_gray"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gray_border"
+                android:editable="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/bt_delete"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="删除账单"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/click_important_button"/>
+            <Button
+                android:id="@+id/bt_edit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:text="修改账单"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/click_button"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_add"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/fab"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="45dp"
+        android:src="@drawable/bt_add_new_note"
+        android:scaleType="center"/>
+
+</FrameLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cq9191.cashbook.HelpActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="使用帮助"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"/>
+
+        <ImageButton
+            android:id="@+id/bt_close"
+            android:background="@null"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/bt_close"
+            android:scaleType="centerCrop"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="18dp"/>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:layout_weight="1">
+        
+        <TextView
+            android:id="@+id/help_text"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="top"
+            android:padding="20dp"
+            android:textColor="@color/blue"/>
+    </ScrollView>
+
+</LinearLayout>

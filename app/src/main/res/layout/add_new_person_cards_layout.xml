@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cq9191.cashbook.MyManageUi.AddNewPersonCards"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <FrameLayout
+        android:id="@+id/fl_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:id="@+id/top_title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="编辑人物分类卡"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:gravity="center"/>
+        <ImageButton
+            android:id="@+id/bt_done"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/bt_finish_add"
+            android:scaleType="centerCrop"
+            android:background="@null"
+            android:layout_marginRight="20dp"/>
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/et_new_person"
+        android:layout_below="@id/fl_top_title"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:hint="请输入新人物卡名字" />
+
+    <Button
+        android:id="@+id/bt_add"
+        android:layout_below="@id/fl_top_title"
+        android:layout_toRightOf="@id/et_new_person"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:text="添加新人物卡"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/click_button"/>
+
+    <EditText
+        android:id="@+id/et_delete_person"
+        android:layout_below="@id/et_new_person"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:hint="请输入删除卡片名字" />
+
+    <Button
+        android:id="@+id/bt_delete"
+        android:layout_below="@id/bt_add"
+        android:layout_toRightOf="@id/et_new_person"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:text="删除人物卡"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/click_important_button"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_below="@id/et_delete_person"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/middle_line_1"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"/>
+
+    <!--人物卡片 网格视图-->
+    <GridView
+        android:id="@+id/grid_person"
+        android:layout_below="@id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:layout_margin="3dp"
+        android:horizontalSpacing="3dp"
+        android:verticalSpacing="3dp"
+        android:layout_marginBottom="70dp">
+    </GridView>
+
+    <!--底部 返回、完成编辑 按钮-->
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_below="@id/grid_person"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="10dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/click_button"
+            android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/bt_finish"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginLeft="10dp"
+            android:text="完成编辑"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/click_important_button"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
