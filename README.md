@@ -1,3 +1,3 @@
 # CashBook
-This app is developed to help my mom to keep accounts (her busy work). So I make this app before her birthday and wanna take this as
-a gift. Final statement, this app is developed by QiaoJim during 2016.7.30 - 2016.9.5
+“爱记账”App是我自己做给老妈的生日礼物吧，她和老爸在一起打拼，手下有着几个员工。记账任务也不少，所以想着借助自己会的一些adnroid
+技术，开发一个记账类的App，稍微给老妈一些方便。之前也没有做一个功能比较完整的App，这算是第一步了。
